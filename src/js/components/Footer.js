@@ -1,16 +1,16 @@
 import {Component} from 'react'
 
-import './../../styles/Fotter.scss'
+import '../../styles/Footer.scss'
 
-class Fotter extends Component {
+class Footer extends Component {
 
     render() {
         return (
             <div className="Fotter">
-                <p>Fotter</p>
+                <p>Footer</p>
             </div>
         )
     }
 }
 
-export default Fotter
+export default Footer;
