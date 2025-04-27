@@ -2,37 +2,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 52px 20px 0 0;
-  font-family: Merienda, serif;
+  padding: 52px 0 0 142px;
   width: 216px;
-  color: #FFF;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  white-space: nowrap;
 
   &__logo {
-    font-size: 24px;
-    font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 10px;
   }
 
   &__icon {
+    position: relative;
+    top: -10px; /* поднимаем вверх */
     width: 35px;
     height: 35px;
-    fill: white;
   }
 
   &__menu {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 40px;
 
     .nav__item {
-      font-size: 18px;
       cursor: pointer;
-      font-family: Merienda, serif;
       &:hover {
         text-decoration: underline;
       }
