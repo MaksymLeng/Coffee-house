@@ -1,29 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
 
-:root {
-  --font-main: 'Merienda', cursive;
-  --color-black: #000;
-  --color-white: #FFF;
+$font-main: 'Merienda', cursive;
+$color-black: #000;
+$color-white: #FFF;
 
-  --font-size-xs: 12px;
-  --font-size-sm: 14px;
-  --font-size-md: 24px;
-  --font-size-lg: 40px;
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 24px;
+$font-size-lg: 40px;
 
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-}
+$font-weight-normal: 400;
+$font-weight-bold: 700;
 
-body {
-  font-family: var(--font-main), serif;
+* {
+  font-family: $font-main, serif;
 }
 
 .text-black {
-  color: var(--color-black);
+  color: $color-black;
 }
 
 .text-white {
-  color: var(--color-white);
+  color: $color-white;
 }
 
 .text-center {
@@ -35,25 +33,29 @@ body {
 }
 
 .text-xs {
-  font-size: var(--font-size-xs);
+  font-size: $font-size-xs;
 }
 
 .text-sm {
-  font-size: var(--font-size-sm);
+  font-size: $font-size-sm;
 }
 
 .text-md {
-  font-size: var(--font-size-md);
+  font-size: $font-size-md;
 }
 
 .text-lg {
-  font-size: var(--font-size-lg);
+  font-size: $font-size-lg;
 }
 
 .font-normal {
-  font-weight: var(--font-weight-normal);
+  font-weight: $font-weight-normal;
 }
 
 .font-bold {
-  font-weight: var(--font-weight-bold);
+  font-weight: $font-weight-bold;
+}
+
+.text-preline {
+  white-space: pre-line;
 }

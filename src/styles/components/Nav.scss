@@ -2,18 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 52px 0 0 142px;
-  width: 216px;
+  padding: 5vh 0 0 5.5vw;
+  width: 20vw;
   white-space: nowrap;
 
   &__logo {
     display: flex;
     align-items: center;
+    cursor: pointer;
+    &:hover {
+      color: #DFCCAF;
+    }
   }
 
   &__icon {
     position: relative;
-    top: -10px; /* поднимаем вверх */
+    top: -10px;
     width: 35px;
     height: 35px;
   }
@@ -26,7 +30,7 @@
     .nav__item {
       cursor: pointer;
       &:hover {
-        text-decoration: underline;
+        color: #DFCCAF;
       }
     }
   }
