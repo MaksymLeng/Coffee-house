@@ -1,12 +1,4 @@
-@mixin hover-theme-color($light, $dark) {
-  &.white:hover {
-    color: $light;
-  }
-
-  &.black:hover {
-    color: $dark;
-  }
-}
+@import './mixins.scss';
 
 .nav {
   display: flex;
@@ -18,6 +10,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;
     @include hover-theme-color(#DFCCAF, #BE9B7B);
   }
 
@@ -35,6 +28,7 @@
 
     .nav__item {
       cursor: pointer;
+      text-decoration: none;
       @include hover-theme-color(#DFCCAF, #BE9B7B);
     }
   }

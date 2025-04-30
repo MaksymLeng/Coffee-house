@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { withTranslation} from "react-i18next";
+import {Link} from "react-router-dom";
 import { ReactComponent as WhiteCoffeeBean} from '../../assets/images/icons/coffee-beans-logo white.svg';
 import { ReactComponent as BlackCoffeeBean} from '../../assets/images/icons/coffee-beans-logo black.svg';
 
@@ -15,12 +16,12 @@ class Nav extends Component{
         return (
             <nav className="nav">
                 <div className="nav__menu">
-                    <div className={`nav__logo text-xs font-normal ${color}`}>
+                    <Link to="/" className={`nav__logo text-xs font-normal ${color}`}>
                         <LogoIcon className="nav__icon"/>
                         {t('nav.logo')}
-                    </div>
-                    <div className={`nav__item text-xs font-normal ${color}`}>{t('nav.ourCoffee')}</div>
-                    <div className={`nav__item text-xs font-normal ${color}`}>{t('nav.pleasure')}</div>
+                    </Link>
+                    <Link to="/about" className={`nav__item text-xs font-normal ${color}`}>{t('nav.ourCoffee')}</Link>
+                    <Link to="/pleasure" className={`nav__item text-xs font-normal ${color}`}>{t('nav.pleasure')}</Link>
                 </div>
             </nav>
         )

@@ -7,11 +7,11 @@
 
 .product-card {
   background-color: #f9f2e8;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   border-radius: 12px;
   text-align: center;
   width: 220px;
-  height: clamp(160px, 24vh, 240px);
+  height: clamp(160px, 22.5vh, 240px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 
@@ -22,13 +22,13 @@
 
   &__image {
     max-width: 100%;
-    min-height: auto;
-    height: 135px;
+    height: clamp(100px,13vh,135px);
   }
 
   &__title {
     font-size: 1rem;
     margin-bottom: 10px;
+    margin-top: clamp(3px, 1vh, 10px);
     font-style: italic;
   }
 

@@ -48,7 +48,7 @@ $about-us-color-black: #000;
   }
 }
 
-.about-us {
+.aboutUs {
   width: 100%;
 
   &__content {
@@ -57,7 +57,7 @@ $about-us-color-black: #000;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: clamp(30px, 5vh, 100px);
+    padding: 0 20px clamp(30px, 5vh, 100px) 20px
   }
 
   &__title,
@@ -71,10 +71,14 @@ $about-us-color-black: #000;
   }
 }
 
-.our-best {
-  background: url("../../assets/images/bg/second_section_bg.png") center/cover no-repeat;
+.ourBest {
+  background: url("../../assets/images/bg/home-section_bg.png") center/cover no-repeat;
   width: 100%;
   height: clamp(340px, 60vh, 500px);
+
+  @media (max-width: 768px) {
+    height: 1000px;
+  }
 
   &__title {
     padding: 8vh 0 6vh 0;

@@ -1,0 +1,9 @@
+@mixin hover-theme-color($light, $dark) {
+  &.white:hover {
+    color: $light;
+  }
+
+  &.black:hover {
+    color: $dark;
+  }
+}
