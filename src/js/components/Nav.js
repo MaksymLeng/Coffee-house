@@ -1,24 +1,31 @@
-import { ReactComponent as LogoIcon} from '../../assets/images/icons/coffee-beans-logo.svg';
-import { useTranslation} from "react-i18next";
+import { Component } from 'react';
+import { withTranslation} from "react-i18next";
+import { ReactComponent as WhiteCoffeeBean} from '../../assets/images/icons/coffee-beans-logo white.svg';
+import { ReactComponent as BlackCoffeeBean} from '../../assets/images/icons/coffee-beans-logo black.svg';
 
 import '../../styles/components/Nav.scss'
 
-function Nav() {
-    const { t } = useTranslation();
-
-    return (
-        <nav className="nav">
-            <div className="nav__menu">
-                <div className="nav__logo text-white text-xs font-normal">
-                    <LogoIcon className="nav__icon"/>
-                    {t('nav.logo')}
+class Nav extends Component{
+    render()
+    {
+        const { boolColor } = this.props;
+        const { t } = this.props;
+        const color = boolColor ? 'text-white white' : 'text-black black';
+        const LogoIcon = boolColor ? WhiteCoffeeBean : BlackCoffeeBean;
+        return (
+            <nav className="nav">
+                <div className="nav__menu">
+                    <div className={`nav__logo text-xs font-normal ${color}`}>
+                        <LogoIcon className="nav__icon"/>
+                        {t('nav.logo')}
+                    </div>
+                    <div className={`nav__item text-xs font-normal ${color}`}>{t('nav.ourCoffee')}</div>
+                    <div className={`nav__item text-xs font-normal ${color}`}>{t('nav.pleasure')}</div>
                 </div>
-                <div className='nav__item text-white text-xs font-normal'>{t('nav.ourCoffee')}</div>
-                <div className='nav__item text-white text-xs font-normal'>{t('nav.pleasure')}</div>
-            </div>
-        </nav>
-    )
+            </nav>
+        )
+    }
 }
 
-export default Nav;
+export default withTranslation() (Nav);
 

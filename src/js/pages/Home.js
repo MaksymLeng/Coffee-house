@@ -1,10 +1,10 @@
 import {Component} from 'react';
-import { ReactComponent as WhiteCoffeeBean} from '../../assets/images/icons/coffee-beans white.svg';
-import { ReactComponent as BlackCoffeeBean} from '../../assets/images/icons/coffee-beans black.svg';
 import { withTranslation } from 'react-i18next';
 
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import Transitions from '../components/Transition';
+
 import '../../styles/Home/Home.scss'
 
 class Home extends Component {
@@ -13,14 +13,10 @@ class Home extends Component {
         return (
             <>
                 <header className="home">
-                    <Nav/>
+                    <Nav boolColor = {true}/>
                     <div className='home__content'>
                         <h1 className="home__title text-white font-bold text-lg text-shadow">{t('home.title')}</h1>
-                        <div className="home__transition">
-                            <div className="home__line"></div>
-                            <WhiteCoffeeBean className="home__icon" />
-                            <div className="home__line"></div>
-                        </div>
+                        <Transitions boolColor = {true}/>
                         <h2 className="home__subtitle text-md text-white text-preline">{t('home.subtitle')}</h2>
                         <button className="home__btn text-sm font-bold text-white">{t('button.more')}</button>
                     </div>
@@ -28,11 +24,7 @@ class Home extends Component {
                 <section className="about-us">
                     <div className="about-us__content">
                         <h2 className="about-us__title text-black text-md font-normal">{t('about.title')}</h2>
-                        <div className="about-us__transition">
-                            <div className="about-us__line"></div>
-                            <BlackCoffeeBean className="about-us__icon" />
-                            <div className="about-us__line"></div>
-                        </div>
+                        <Transitions boolColor = {false}/>
                         <p className="about-us__text text-sm text-black text-preline">{t('about.text')}</p>
                     </div>
                 </section>

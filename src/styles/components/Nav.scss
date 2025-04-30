@@ -1,18 +1,24 @@
+@mixin hover-theme-color($light, $dark) {
+  &.white:hover {
+    color: $light;
+  }
+
+  &.black:hover {
+    color: $dark;
+  }
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5vh 0 0 5.5vw;
-  width: 20vw;
   white-space: nowrap;
 
   &__logo {
     display: flex;
     align-items: center;
     cursor: pointer;
-    &:hover {
-      color: #DFCCAF;
-    }
+    @include hover-theme-color(#DFCCAF, #BE9B7B);
   }
 
   &__icon {
@@ -29,9 +35,7 @@
 
     .nav__item {
       cursor: pointer;
-      &:hover {
-        color: #DFCCAF;
-      }
+      @include hover-theme-color(#DFCCAF, #BE9B7B);
     }
   }
 }

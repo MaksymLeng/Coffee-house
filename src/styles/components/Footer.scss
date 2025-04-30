@@ -1,4 +1,14 @@
 .Footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  .nav {
+    padding-bottom: 2vh;
+  }
+
+  .transition {
+    padding-bottom: 20px;
+  }
 }

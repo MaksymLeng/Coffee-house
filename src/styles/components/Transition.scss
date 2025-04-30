@@ -1,0 +1,20 @@
+$color-white: #fff;
+$color-black: #000;
+
+.transition {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.line {
+  width: 60px;
+  height: 1px;
+
+  &__white {
+    background-color: $color-white;
+  }
+  &__black {
+    background-color: $color-black;
+  }
+}
