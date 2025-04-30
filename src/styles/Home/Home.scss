@@ -50,7 +50,6 @@ $about-us-color-black: #000;
 
 .about-us {
   width: 100%;
-  height: clamp(400px, 65vh, 520px);
 
   &__content {
     margin-top: 5.3vh;
@@ -58,7 +57,7 @@ $about-us-color-black: #000;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 5vh;
+    padding-bottom: clamp(30px, 5vh, 100px);
   }
 
   &__title,
@@ -69,5 +68,17 @@ $about-us-color-black: #000;
 
   &___text {
     margin-top: 25px;
+  }
+}
+
+.our-best {
+  background: url("../../assets/images/bg/second_section_bg.png") center/cover no-repeat;
+  width: 100%;
+  height: clamp(340px, 60vh, 500px);
+
+  &__title {
+    padding: 8vh 0 6vh 0;
+    margin: 0;
+    text-align: center;
   }
 }

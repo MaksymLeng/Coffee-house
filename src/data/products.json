@@ -1,0 +1,31 @@
+{
+  "best": [
+    {
+      "id": 1,
+      "image": "solimo.png",
+      "title": "Solimo Coffee Beans 2 kg",
+      "price": "10.73"
+    },
+    {
+      "id": 2,
+      "image": "presto.png",
+      "title": "Presto Coffee Beans 1 kg",
+      "price": "15.99"
+    },
+    {
+      "id": 3,
+      "image": "aromistico.png",
+      "title": "AROMISTICO Coffee 1 kg",
+      "price": "6.99"
+    }
+  ],
+  "all": [
+    { "id": 1, "title": "AROMISTICO...", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
+    { "id": 2, "title": "AROMISTICO...", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
+    { "id": 3, "title": "AROMISTICO...", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
+    { "id": 4, "title": "AROMISTICO...", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
+    { "id": 5, "title": "AROMISTICO...", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
+    { "id": 6, "title": "AROMISTICO...", "price": "6.99", "country": "Brazil", "image": "aromistico.png" }
+  ]
+}
+

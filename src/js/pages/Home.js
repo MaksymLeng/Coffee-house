@@ -4,12 +4,13 @@ import { withTranslation } from 'react-i18next';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Transitions from '../components/Transition';
+import BeastCoffee from "../components/BeastCoffee";
 
 import '../../styles/Home/Home.scss'
 
 class Home extends Component {
     render() {
-        const { t } = this.props;
+        const {t, products} = this.props;
         return (
             <>
                 <header className="home">
@@ -28,8 +29,11 @@ class Home extends Component {
                         <p className="about-us__text text-sm text-black text-preline">{t('about.text')}</p>
                     </div>
                 </section>
-                <section className="home__section">
-
+                <section className="our-best">
+                    <div className="our-best__content">
+                        <h2 className="our-best__title text-black text-md font-normal">{t('ourBest.title')}</h2>
+                        <BeastCoffee products={products}/>
+                    </div>`
                 </section>
                 <Footer/>
             </>
