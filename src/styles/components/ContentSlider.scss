@@ -69,6 +69,9 @@
         left:20px;
         top:80%;
       }
+      @media (max-width: 1920px) {
+        left: 20vw;
+      }
     }
 
     &--next {
@@ -76,6 +79,9 @@
       @media (max-width: 768px) {
         right:20px;
         top:80%;
+      }
+      @media (max-width: 1920px) {
+        right: 20vw;
       }
     }
 
