@@ -56,7 +56,6 @@
   &__arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(50%);
     background: none;
     border: none;
     font-size: 2rem;
@@ -68,6 +67,7 @@
       left: 28vw;
       @media (max-width: 768px) {
         left:20px;
+        top:80%;
       }
     }
 
@@ -75,6 +75,7 @@
       right: 28vw;
       @media (max-width: 768px) {
         right:20px;
+        top:80%;
       }
     }
 

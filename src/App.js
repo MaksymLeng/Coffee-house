@@ -1,26 +1,15 @@
-import React, {Component} from 'react';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
-import Home from "./js/pages/Home";
-import ForYourPleasure from "./js/pages/forYourPleasure";
-import OurCoffee from "./js/pages/ourCoffee";
-import { getBestProducts, getProducts} from "./api/products";
+import {pages} from "./js/pages/pages";
 
-class App extends Component{
-  render() {
-    const bestProducts = getBestProducts();
-    const products = getProducts();
+export function App(){
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Home products={bestProducts}/>} />
-                <Route path="/about" element={<OurCoffee products={products} />} />
-                <Route path="/pleasure" element={<ForYourPleasure />} />
+                { pages.map(({path, component}) => (
+                    <Route key={path} path={path} element={component} />
+                ))}
             </Routes>
         </Router>
     );
-  }
 }
-
-
-export default App;

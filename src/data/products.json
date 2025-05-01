@@ -20,12 +20,12 @@
     }
   ],
   "all": [
-    { "id": 1, "title": "AROMISTICO...", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
-    { "id": 2, "title": "AROMISTICO...", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
-    { "id": 3, "title": "AROMISTICO...", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
-    { "id": 4, "title": "AROMISTICO...", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
-    { "id": 5, "title": "AROMISTICO...", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
-    { "id": 6, "title": "AROMISTICO...", "price": "6.99", "country": "Brazil", "image": "aromistico.png" }
+    { "id": 1, "title": "AROMISTICO Coffee 1 kg", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
+    { "id": 2, "title": "AROMISTICO Coffee 1 kg", "price": "6.99", "country": "Kenya", "image": "aromistico.png" },
+    { "id": 3, "title": "AROMISTICO Coffee 1 kg", "price": "6.99", "country": "Columbia", "image": "aromistico.png" },
+    { "id": 4, "title": "AROMISTICO Coffee 1 kg", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
+    { "id": 5, "title": "AROMISTICO Coffee 1 kg", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
+    { "id": 6, "title": "AROMISTICO Coffee 1 kg", "price": "6.99", "country": "Brazil", "image": "aromistico.png" }
   ]
 }
 

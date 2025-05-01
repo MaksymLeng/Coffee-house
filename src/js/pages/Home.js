@@ -5,12 +5,14 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Transitions from '../components/Transition';
 import BeastCoffee from "../components/BeastCoffee";
+import { getBestProducts} from "../../api/products";
 
 import '../../styles/Home/Home.scss'
 
 class Home extends Component {
     render() {
-        const {t, products} = this.props;
+        const {t} = this.props;
+        const products = getBestProducts();
         return (
             <>
                 <header className="home">
@@ -32,7 +34,7 @@ class Home extends Component {
                 <section className="ourBest">
                     <div className="ourBest__content">
                         <h2 className="ourBest__title text-black text-md font-normal">{t('ourBest.title')}</h2>
-                        <BeastCoffee products={products}/>
+                        <BeastCoffee products={products} mode={true}/>
                     </div>`
                 </section>
                 <Footer/>
