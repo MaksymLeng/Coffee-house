@@ -9,6 +9,6 @@ export const getBestProducts = () => products(raw.best);
 
 export const getProducts = () => products(raw.all);
 
-export const getByCountry = (country) => {
+export const getByCountry = (country, type) => {
     return products(raw.all).filter(product => product.country === country);
 }

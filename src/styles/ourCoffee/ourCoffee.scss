@@ -82,9 +82,14 @@
         &:hover {
           background: #DFCCAF;
         }
+
+        &.active {
+          scale: 1.1;
+          border: 1px solid #000;
+          background: #DFCCAF;
+        }
       }
     }
   }
-
 }
 
