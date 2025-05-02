@@ -14,7 +14,7 @@
   border-radius: 12px;
   text-align: center;
   width: 180px;
-  height: clamp(180px, 26vh, 240px);
+  height: clamp(180px, 23vh, 230px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 
@@ -38,17 +38,15 @@
   &__price {
     text-align: right;
     margin: 0;
-    padding-right: 18px;
   }
 
   &__country {
     text-align: right;
-    margin: 0 0 clamp(3px, 1.4vh, 14px) 0;
-    padding-right: 18px;
+    margin: 0 0 clamp(3px, 1vh, 14px) 0;
   }
   
   &.mode {
     background: #fff;
-    height: clamp(160px, 26vh, 260px);
+    height: clamp(190px, 26vh, 260px);
   }
 }

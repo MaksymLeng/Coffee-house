@@ -49,9 +49,11 @@ class ContentSlider extends Component {
                                         {t(slide.titleKey)}
                                     </h2>
                                     <div className="slider__decor"><Transitions /></div>
-                                    <p className="slider__text text-sm text-black font-normal text-preline" style={{textAlign: textPosition, margin: marginText}}>
+                                    <p className="slider__text text-sm text-black font-normal text-preline"
+                                       style={{textAlign: textPosition, margin: marginText}}>
                                         <Trans i18nKey={slide.textKey} components={[<b />]} />
                                     </p>
+
                                     {slide.price && (
                                         <div className="slider__price">
                                             <div className="slider__price-text text-sm text-black font-bold">Price:</div>

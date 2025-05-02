@@ -6,19 +6,20 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import ContentSlider from "../components/ContentSlider";
 import BeastCoffee from "../components/BeastCoffee";
-import { getProducts, getByCountry} from "../../api/products";
+import { getProducts} from "../../api/products";
 
 import '../../styles/ourCoffee/ourCoffee.scss'
 
 export function OurCoffee() {
-    const {t} = useTranslation();
-    const products = getProducts();
-
+    const { t } = useTranslation();
+    const [currentLabel, setLabel] = useState(null);
     const [btnArr, setBtnArr] = useState([
         { Brazil: false },
         { Kenya: false },
         { Columbia: false }
     ]);
+
+    const products = currentLabel ? getProducts(currentLabel) : getProducts();
 
     const renderButtons = () => {
         return btnArr.map((btn, index) => {
@@ -42,15 +43,22 @@ export function OurCoffee() {
     };
 
     const handleClick = (label) => {
+        if (label === currentLabel) {
+            setLabel(null);
+        } else {
+            setLabel(label);
+        }
+
         const updated = btnArr.map((btn) => {
-            const key = Object.keys(btn)[0];
-            return { [key]: key === label }; // только кликнутый true
+            const entries = Object.entries(btn);
+            if (entries.length === 0) return btn;
+
+            const [key] = entries[0];
+            return { [key]: key === label && label !== currentLabel };
         });
 
         setBtnArr(updated);
     };
-
-
 
     return (
         <>

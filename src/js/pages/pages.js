@@ -1,4 +1,4 @@
-import Home from "./Home";
+import {Home} from "./Home";
 import ForYourPleasure from "./forYourPleasure";
 import {OurCoffee} from "./ourCoffee";
 
