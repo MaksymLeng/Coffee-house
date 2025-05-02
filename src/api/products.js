@@ -7,10 +7,23 @@ const products = (arr) => arr.map(product => ({
 
 export const getBestProducts = () => products(raw.best);
 
-export const getProducts = (country) => {
+export const getProducts = (country, query) => {
     const all = products(raw.all);
 
-    if (!country) return all;
+    let filtered = all;
 
-    return all.filter(product => product.country === country);
+    if (country) {
+        filtered = filtered.filter(product => product.country === country);
+    }
+
+    if (query) {
+        const lowered = query.toLowerCase();
+        filtered = filtered.filter(product =>
+            Object.values(product).some(value =>
+                String(value).toLowerCase().includes(lowered)
+            )
+        );
+    }
+
+    return filtered;
 };

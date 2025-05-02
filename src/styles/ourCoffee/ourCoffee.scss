@@ -1,3 +1,4 @@
+@import './../components/mixins.scss';
 
 .ourCoffee {
   background: url("../../assets/images/bg/ourCoffee_bg.png") center/cover no-repeat;
@@ -18,29 +19,21 @@
 }
 
 .buyingGoods {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flex(column, center, center);
   margin-top: 5vh;
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    @include flex(column, center, center);
     gap: 65px;
   }
 
   &__filter {
-    display: flex;
-    flex-direction: row;
+    @include flex(row, center, center);
     gap: 80px;
-    justify-content: center;
   }
 
   &__search {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex(row, center, center);
     gap: 20px;
 
     &-input {
@@ -56,9 +49,7 @@
   }
 
   &__sort {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex(row, center, center);
     gap: 35px;
 
     &-text {
@@ -66,8 +57,7 @@
     }
 
     &__wrapperBtn {
-      display: flex;
-      flex-direction: row;
+      @include flex(row, center, center);
       gap: 5px;
 
       &-btn {

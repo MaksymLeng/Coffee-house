@@ -1,10 +1,10 @@
 $color-white: #fff;
 $color-black: #000;
+@import './mixins.scss';
 
 .transition {
-  display: flex;
+  @include flex(row, center, center);
   gap: 25px;
-  align-items: center;
 }
 
 .line {

@@ -20,12 +20,12 @@
     }
   ],
   "all": [
-    { "id": 1, "title": "AROMISTICO Coffee 1 kg", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
-    { "id": 2, "title": "AROMISTICO Coffee 1 kg", "price": "6.99", "country": "Kenya", "image": "aromistico.png" },
-    { "id": 3, "title": "AROMISTICO Coffee 1 kg", "price": "6.99", "country": "Columbia", "image": "aromistico.png" },
-    { "id": 4, "title": "AROMISTICO Coffee 1 kg", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
-    { "id": 5, "title": "AROMISTICO Coffee 1 kg", "price": "6.99", "country": "Brazil", "image": "aromistico.png" },
-    { "id": 6, "title": "AROMISTICO Coffee 1 kg", "price": "6.99", "country": "Brazil", "image": "aromistico.png" }
+    { "id": 1, "title": "Ambrera Coffee 1 kg", "price": "8.32", "country": "Brazil", "image": "aromistico.png" },
+    { "id": 2, "title": "Gertuda Coffee 1 kg", "price": "11", "country": "Kenya", "image": "aromistico.png" },
+    { "id": 3, "title": "AROMISTICO Coffee 1 kg", "price": "4.49", "country": "British", "image": "aromistico.png" },
+    { "id": 4, "title": "Amphina Coffee 1 kg", "price": "6.99", "country": "Italia", "image": "aromistico.png" },
+    { "id": 5, "title": "Dermon Coffee 1 kg", "price": "2.39", "country": "Russian", "image": "aromistico.png" },
+    { "id": 6, "title": "Leuvon Coffee 1 kg", "price": "8.59", "country": "Brazil", "image": "aromistico.png" }
   ]
 }
 

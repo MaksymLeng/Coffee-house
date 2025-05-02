@@ -1,8 +1,7 @@
+@import './mixins.scss';
+
 .Footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex(column, center, center);
 
   .nav {
     padding: 5vh 0 2vh 0 ;

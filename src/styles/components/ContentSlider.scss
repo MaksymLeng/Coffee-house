@@ -1,21 +1,20 @@
+@import './mixins.scss';
+
 .slider {
 
   &__wrapper {
     position: relative;
   }
   &__decor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(colmn, center, center);
   }
 
   &__content {
-    display: flex;
+    @include flex(row, center, center);
     width: 700px;
     max-width: 1200px;
     margin-top: 5vh;
-    flex-direction: row;
-    justify-content: center;
+    gap: 80px;
     padding: 0 20px clamp(30px, 5vh, 100px) 20px;
 
     @media (max-width: 768px) {
@@ -23,12 +22,16 @@
       gap: 10px;
       align-items: center;
     }
+
+    &.mode {
+      gap: 40px;
+      width: 800px;
+    }
   }
 
   &__slide {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    @include flex(row, center, center);
   }
 
   &__photo {
@@ -38,18 +41,22 @@
     display: block;
 
     &-grid {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex(row, center, center);
     }
   }
 
   &__text {
     width: clamp(200px, 35vw, 350px);
-    margin-top: 25px;
+    margin: 25px 15px 15px 15px;
+    text-align: center;
 
     &-grid {
       text-align: center;
+    }
+
+    &.mode {
+      text-align: left;
+      margin: 0;
     }
   }
 
@@ -93,18 +100,13 @@
   &__price {
     margin-top: 5px;
     text-align: left;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex(row, left, center);
     gap: 15px;
   }
 }
 
 .slider__main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flex(column, center, center);
   width: 100%;
   height: clamp(430px, 60vh, 485px);
 

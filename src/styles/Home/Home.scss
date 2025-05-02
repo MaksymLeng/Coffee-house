@@ -1,6 +1,7 @@
 $home-color-white: #fff;
 $home-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 $about-us-color-black: #000;
+@import './../components/mixins.scss';
 
 .home {
   background: url("../../assets/images/bg/home_bg.png") center/cover no-repeat;
@@ -13,10 +14,7 @@ $about-us-color-black: #000;
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex(column, center, center);
     margin-top: 8vh;
   }
 
@@ -53,10 +51,7 @@ $about-us-color-black: #000;
 
   &__content {
     margin-top: 5.3vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex(column, center, center);
     padding: 0 20px clamp(30px, 5vh, 100px) 20px
   }
 

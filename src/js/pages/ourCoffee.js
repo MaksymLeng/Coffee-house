@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
-import ContentSlider from "../components/ContentSlider";
+import {ContentSlider} from "../components/ContentSlider";
 import BeastCoffee from "../components/BeastCoffee";
 import { getProducts} from "../../api/products";
 
@@ -12,14 +12,17 @@ import '../../styles/ourCoffee/ourCoffee.scss'
 
 export function OurCoffee() {
     const { t } = useTranslation();
-    const [currentLabel, setLabel] = useState(null);
+    const [currentCountry, setCountry] = useState(null);
+    const [currentQuery, setQuery] = useState('');
     const [btnArr, setBtnArr] = useState([
         { Brazil: false },
         { Kenya: false },
         { Columbia: false }
     ]);
 
-    const products = currentLabel ? getProducts(currentLabel) : getProducts();
+    const queryAndCountry = currentQuery? getProducts(currentCountry, currentQuery) : getProducts(currentCountry)
+    const query = currentQuery ? getProducts('', currentQuery) : getProducts();
+    const products = currentCountry ?  queryAndCountry : query;
 
     const renderButtons = () => {
         return btnArr.map((btn, index) => {
@@ -42,11 +45,11 @@ export function OurCoffee() {
         });
     };
 
-    const handleClick = (label) => {
-        if (label === currentLabel) {
-            setLabel(null);
+    const handleClick = (Country) => {
+        if (Country === currentCountry) {
+            setCountry(null);
         } else {
-            setLabel(label);
+            setCountry(Country);
         }
 
         const updated = btnArr.map((btn) => {
@@ -54,7 +57,7 @@ export function OurCoffee() {
             if (entries.length === 0) return btn;
 
             const [key] = entries[0];
-            return { [key]: key === label && label !== currentLabel };
+            return { [key]: key === Country && Country !== currentCountry };
         });
 
         setBtnArr(updated);
@@ -75,7 +78,11 @@ export function OurCoffee() {
                     <div className="buyingGoods__filter">
                         <div className="buyingGoods__search">
                             <div className="buyingGoods__search-text text-sm font-normal">Looking for</div>
-                            <input type="text" className="buyingGoods__search-input text-xs" placeholder="start typing here..."/>
+                            <input type="text"
+                                   className="buyingGoods__search-input text-xs"
+                                   placeholder="start typing here..."
+                                   value={currentQuery}
+                                   onChange={(e) => setQuery(e.target.value)}/>
                         </div>
                         <div className="buyingGoods__sort">
                             <div className="buyingGoods__sort-text text-sm font-normal">Or filter</div>
