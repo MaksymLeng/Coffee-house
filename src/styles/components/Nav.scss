@@ -4,11 +4,25 @@
   @include flex(row, space-between, center);
   white-space: nowrap;
 
+  &-wrapper {
+    display: contents;
+    @media (max-width: 768px) {
+      display: block;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+  }
+
   &__logo {
     @include flex(row, center, center);
     cursor: pointer;
     text-decoration: none;
     @include hover-theme-color(#DFCCAF, #BE9B7B);
+
+    &.active {
+      color: #DFCCAF;
+    }
   }
 
   &__icon {
@@ -26,6 +40,9 @@
       cursor: pointer;
       text-decoration: none;
       @include hover-theme-color(#DFCCAF, #BE9B7B);
+      &.active {
+        color: #BE9B7B;
+      }
     }
   }
 }

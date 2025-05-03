@@ -80,4 +80,8 @@ $about-us-color-black: #000;
     margin: 0;
     text-align: center;
   }
+
+  &__content {
+    padding: 0 clamp(30px, 5vw, 100px);
+  }
 }

@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import SwipeableViews from 'react-swipeable-views';
 import {useTranslation, Trans} from "react-i18next";
 
-import Transitions from './Transition';
+import {Transition} from './Transition';
 import { sliderSlides} from "../../api/slidesData";
 
 import '../../styles/components/ContentSlider.scss'
@@ -43,7 +43,7 @@ export function ContentSlider(props) {
                                 <h2 className="slider__title text-black text-md font-normal">
                                     {t(slide.titleKey)}
                                 </h2>
-                                <div className="slider__decor"><Transitions /></div>
+                                <div className="slider__decor"><Transition /></div>
                                 <p className={ifFirstText}>
                                     <Trans i18nKey={slide.textKey} components={[<b />]} />
                                 </p>

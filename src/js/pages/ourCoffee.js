@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Nav from '../components/Nav';
-import Footer from '../components/Footer';
+import {Footer} from '../components/Footer';
 import {ContentSlider} from "../components/ContentSlider";
 import BeastCoffee from "../components/BeastCoffee";
 import { getProducts} from "../../api/products";
@@ -20,9 +20,14 @@ export function OurCoffee() {
         { Columbia: false }
     ]);
 
-    const queryAndCountry = currentQuery? getProducts(currentCountry, currentQuery) : getProducts(currentCountry)
-    const query = currentQuery ? getProducts('', currentQuery) : getProducts();
-    const products = currentCountry ?  queryAndCountry : query;
+    const products =
+        currentCountry
+            ? currentQuery
+                ? getProducts(currentCountry, currentQuery)
+                : getProducts(currentCountry)
+            : currentQuery
+                ? getProducts('', currentQuery)
+                : getProducts();
 
     const renderButtons = () => {
         return btnArr.map((btn, index) => {

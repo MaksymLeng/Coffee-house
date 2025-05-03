@@ -4,7 +4,6 @@
   background: url("../../assets/images/bg/ourCoffee_bg.png") center/cover no-repeat;
   width: 100%;
   height: clamp(200px, 32vh ,260px);
-  overflow: hidden;
 
   .nav {
     padding: 5vh 0 0 5.5vw;
@@ -30,6 +29,10 @@
   &__filter {
     @include flex(row, center, center);
     gap: 80px;
+
+    @media (max-width: 768px) {
+      gap: 30px;
+    }
   }
 
   &__search {
@@ -59,6 +62,9 @@
     &__wrapperBtn {
       @include flex(row, center, center);
       gap: 5px;
+      @media (max-width: 768px) {
+        @include flex(column, center, center);
+      }
 
       &-btn {
         width: 75px;
@@ -68,10 +74,6 @@
         box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.25);
         cursor: pointer;
         border: none;
-
-        &:hover {
-          background: #DFCCAF;
-        }
 
         &.active {
           scale: 1.1;

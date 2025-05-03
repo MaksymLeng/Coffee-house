@@ -1,7 +1,7 @@
 import {useTranslation} from "react-i18next";
 
 import Nav from '../components/Nav';
-import Footer from '../components/Footer';
+import {Footer} from '../components/Footer';
 
 import BeastCoffee from "../components/BeastCoffee";
 import { getProducts} from "../../api/products";
